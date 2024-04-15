@@ -1,0 +1,619 @@
+:root {
+    --mainclr: #239f85;
+    --secclr: #ff5d22;
+}
+body{
+    font-family:sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    transition: .2s;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow: scroll;
+}
+
+.header {
+    padding: 1.5rem 7%;
+    background-color: var(--mainclr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header #logo {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: white;
+    margin-left: 2rem;
+    position: relative;
+}
+
+.navbar a:after {
+    content: '';
+    background: var(--secclr);
+    width: 0;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    transition: .3s;
+}
+
+.navbar a:hover:after {
+    content: '';
+    background: var(--secclr);
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+}
+
+.icons div {
+    font-size: 2rem;
+    margin-right: 1rem;
+    display: none;
+    color: white;
+}
+
+.icons a {
+    color: white;
+    background-color: var(--secclr);
+    padding: 1.5rem 3rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.icons a:hover {
+    background: transparent;
+    border: 1 px solid var(--secclr);
+}
+
+.navbar .active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Background image */
+
+.background-image {
+    background: url('https://thumbs.dreamstime.com/z/confident-young-female-doctor-medical-professional-hospital-portrait-standing-clinic-hallway-windows-background-positive-51680510.jpg?w=992');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 6%;
+    position: relative;
+}
+
+.background-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-80%);
+}
+
+.background-content h1 {
+    color: black;
+    font-size: 40px;
+    margin-bottom: 45px;
+}
+
+.background-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.background-content a {
+    background-color: var(--secclr);
+    padding: 1.5rem 3rem;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.background-content a:hover {
+    background: transparent;
+    border: 1px solid var(--secclr);
+    color: balck;
+}
+
+/* -----  About Section   ------------------------ */
+
+#about {
+    padding: 4rem 7%;
+    background: #bdc0bf;
+
+}
+
+.main-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.inner-about {
+    flex: 1 1 45rem;
+}
+
+.inner-about .inner-about-image img {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.about-content {
+    width: 80%;
+}
+
+.about-content h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.about-content a {
+    background: var(--secclr);
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    color: white;
+    transition: .5s;
+}
+
+.about-content a:hover {
+    background: transparent;
+    border: 1px solid var(--secclr);
+    color: black;
+}
+
+/*------- Our services adding the section--------  */
+
+
+.our-services {
+    padding: 4rem 7%;
+}
+
+.services-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.left-services-content {
+    flex: 1 1 45rem;
+}
+
+.right-services-content {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1 45rem;
+}
+
+.left-services-content h1 {
+    font-size: 40px;
+    margin-bottom: 17px;
+}
+
+.left-services-content p {
+    font-size: 1.5rem;
+}
+
+.right-services-content .right-btn a {
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+    color: white;
+    background: var(--secclr);
+}
+
+.right-services-content .right-btn a:hover {
+    border: 1px solid var(--secclr);
+    background: transparent;
+    color: black;
+}
+
+/* ------Main services------------- */
+
+
+.main-services {
+    padding: 6rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.inner-services-content {
+    flex: 1 1 300px;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.inner-services-content h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.inner-services-content .num{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color:#8ed7c7;
+}
+
+.inner-services-content p {
+    font-size: 1.5rem;
+}
+
+.service-icon i {
+    font-size: 4rem;
+    color: var(--mainclr);
+    margin-bottom: 15px;
+    width: 8rem;
+    height: 8rem;
+    text-align: center;
+    line-height: 8rem;
+    background-color: #8ac0b4;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+.service-icon i:hover {
+    color: white;
+    background: var(--mainclr);
+}
+
+
+/* ----- adding the increase value the section ------ */
+
+.main-services-width {
+    padding: 6rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #62ae9e;
+}
+
+.inner-services-content-width {
+    flex: 1 1 300px;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color:white;
+}
+
+.inner-services-content-width h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family:sans-serif;
+}
+.inner-services-content-width .num{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color:rgb(221, 36, 36);
+}
+
+.service-icon i {
+    font-size: 4rem;
+    color: var(--mainclr);
+    margin-bottom: 15px;
+    
+    text-align: center;
+    line-height: 8rem;
+    background-color: #8ac0b4;
+}
+
+.service-icon i:hover {
+    color: white;
+    background: var(--mainclr);
+}
+
+
+
+
+/*------------ Gallery section ----------------------------------- */
+
+#gallery {
+    color: white;
+    background: var(--mainclr);
+}
+
+#gallery h1 {
+
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.inner-gallery {
+    flex: 1 1 300px;
+
+}
+
+.inner-gallery img {
+    width: 100%;
+    transition: .3s;
+}
+
+.inner-gallery img:hover {
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
+/*  <<<<<-------------Our doctors---------------------------->>>>>>>>>>> */
+#our-doctors {
+    padding: 4rem 7%;
+}
+
+#our-doctors h1 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--mainclr);
+    margin-bottom: 30px;
+}
+
+.main-doctor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.inner-doctor {
+    flex: 1 1 300px;
+    position: relative;
+}
+
+.inner-doctor img {
+    width: 100%;
+}
+
+.doc-icons {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+.doc-icons div {
+    font-size: 2rem;
+    color: var(--mainclr);
+    background: white;
+    border: 1px solid black;
+    margin-left: 2rem;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.doc-icons div:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    cursor: pointer;
+}
+
+/*  Using the why choseus-------- */
+
+.why-choseus {
+    padding: 4rem 7%;
+
+}
+
+.main-chose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.inner-chose {
+    flex: 1 1 45rem;
+}
+
+.inner-chose img {
+    width: 100%;
+}
+
+.inner-chose h1 {
+    font-size: 40px;
+    color: var(--mainclr);
+}
+
+.main-inner-chose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.chose-icon i {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    background: white;
+    color: var(--mainclr);
+    font-size: 3rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.icon-content {
+    padding: 0 4rem;
+}
+
+.icon-content p {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+/* ------ Using Accordion the FAQs items more information ------- */
+
+
+
+
+/* ----- Adding the Footer section  ----*/
+
+#footer {
+    padding: 6rem 7%;
+    background: #454646;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.inner-footer {
+    flex: 1 1 200px;
+}
+
+.inner-footer img {
+    width: 200px;
+}
+
+.inner-footer h2 {
+    font-size: 2rem;
+    color: white;
+    font-family: sans-serif;
+}
+
+.inner-footer .input-box {
+    padding-top: 50px;
+}
+
+.inner-footer .input-box input {
+    height: 40px;
+    text-align: left;
+    color: rgb(19, 19, 19);
+
+}
+
+.inner-footer .input-box button {
+    width: 60px;
+    height: 40px;
+    background-color: rgb(193, 187, 187);
+    cursor: pointer;
+}
+
+.inner-footer a {
+    font-size: 1.5rem;
+    color: rgb(250, 247, 247);
+    display: block;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    cursor: pointer;
+}
+
+.inner-footer a:hover {
+    margin-left: 10px;
+    color: #ff5d22;
+    font-weight: bold;
+    font-family: sans-serif;
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+/* Using Media Query..... */
+
+@media (max-width:767px) {
+    html {
+        font-size: 55%;
+
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    .icons div {
+        display: initial;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--secclr);
+        display: flex;
+        align-items: center;
+
+        flex-direction: column;
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        font-weight: bolder;
+        margin: 1rem;
+        padding: 1rem;
+        color: black;
+
+    }
+
+    .background-content {
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 5rem;
+    }
+
+    .inner-about .inner-about-image img {
+        margin-top: 20px;
+    }
+
+
+
+}
